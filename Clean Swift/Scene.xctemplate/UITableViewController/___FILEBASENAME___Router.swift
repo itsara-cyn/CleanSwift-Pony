@@ -9,8 +9,14 @@
 
 import UIKit
 
+enum ___VARIABLE_sceneName___Segue: String {
+    case showSomewhere
+}
+
+
 @objc protocol ___VARIABLE_sceneName___RoutingLogic
 {
+    func preparePassData(segue: UIStoryboardSegue)
     //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
@@ -28,6 +34,7 @@ class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingL
     
     //func routeToSomewhere(segue: UIStoryboardSegue?)
     //{
+    //  viewController?.performSegue(withIdentifier: SomewhereSegue.showSomewhere.rawValue, sender: nil)
     //  if let segue = segue {
     //    let destinationVC = segue.destination as! SomewhereViewController
     //    var destinationDS = destinationVC.router!.dataStore!
@@ -49,6 +56,19 @@ class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingL
     //}
     
     // MARK: Passing data
+    func preparePassData(segue: UIStoryboardSegue)
+    {
+        guard let segueValue = ___VARIABLE_sceneName___Segue(rawValue: segue.identifier ?? "") else { return }
+        let package = (segueValue, segue.destination)
+        switch package {
+//        case (.showSomewhere, let destinationVC as SomewhereViewController):
+//            var destinationDS = destinationVC.router!.dataStore!
+//            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+//            break
+        default:
+            break
+        }
+    }
     
     //func passDataToSomewhere(source: ___VARIABLE_sceneName___DataStore, destination: inout SomewhereDataStore)
     //{

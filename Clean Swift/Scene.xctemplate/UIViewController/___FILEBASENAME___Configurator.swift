@@ -6,6 +6,13 @@
 //  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
+import UIKit
+
+extension ___VARIABLE_sceneName___ViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        router?.preparePassData(segue: segue)
+    }
+}
 
 class ___VARIABLE_sceneName___Configurator {
     
