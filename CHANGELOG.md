@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+## 3.0.2.1
+
+- Create configulator template
+- Customize routing with segue identifire perform
+
 ## 3.0.2
 
 - Fixed @testable import for project names containing spaces
