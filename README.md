@@ -1,3 +1,7 @@
+# Clean architecture - Pony
+
+Customize Clean Swift template by Pony team.
+
 To learn more about Clean Swift and the VIP cycle, read:
 
 http://clean-swift.com/clean-swift-ios-architecture
