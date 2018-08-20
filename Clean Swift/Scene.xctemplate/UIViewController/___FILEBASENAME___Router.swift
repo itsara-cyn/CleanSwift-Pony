@@ -14,19 +14,16 @@ enum ___VARIABLE_sceneName___Segue: String {
 }
 
 
-@objc protocol ___VARIABLE_sceneName___RoutingLogic
-{
+@objc protocol ___VARIABLE_sceneName___RoutingLogic {
     func preparePassData(segue: UIStoryboardSegue)
     //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol ___VARIABLE_sceneName___DataPassing
-{
+protocol ___VARIABLE_sceneName___DataPassing {
     var dataStore: ___VARIABLE_sceneName___DataStore? { get }
 }
 
-class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingLogic, ___VARIABLE_sceneName___DataPassing
-{
+class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingLogic, ___VARIABLE_sceneName___DataPassing {
     weak var viewController: ___VARIABLE_sceneName___ViewController?
     var dataStore: ___VARIABLE_sceneName___DataStore?
     
@@ -56,8 +53,7 @@ class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingL
     //}
     
     // MARK: Passing data
-    func preparePassData(segue: UIStoryboardSegue)
-    {
+    func preparePassData(segue: UIStoryboardSegue) {
         guard let segueValue = ___VARIABLE_sceneName___Segue(rawValue: segue.identifier ?? "") else { return }
         let package = (segueValue, segue.destination)
         switch package {
